@@ -1,10 +1,11 @@
+<!-- Ejercicio de laboratorio 6 elegido hecho en nuevo html: "validacionPswds.html" -->
 <!DOCTYPE html>
 <html lang="es">
     <head>
        <meta charset="UTF-8">
        <title>Laboratorio 6 Ana Sofía Moreno</title> 
        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-       <link rel="stylesheet" type= "text/css" href="MINstyle.css"/>
+       <link rel="stylesheet" type= "text/css" href="lab6style.css"/>
        </head>
     <body>
         <header class="titulo">Laboratorio 6: Ana Sofía Moreno</header>
@@ -12,9 +13,15 @@
             <ul>
                 <li><a href="#DatosContacto" class="menuItem">Datos y Contacto</a></li>
                 <li><a href="https://github.com/AnaSofiaMorenoA01707156/-ConstruccionSoftwareYTomaDeDecisiones.git" target="_blank" class="menuItem">Repositorio GitHub</a></li>
+                <li><a href="#EditorHTML" class="menuItem">Editor HTML utilizado</a></li>
                 <li><a href="#Preguntas1" class="menuItem">Preguntas Lab 1</a></li>
                 <li><a href="#Preguntas2" class="menuItem">Preguntas Lab 3</a></li>
-                <li><a href="#EditorHTML" class="menuItem">Editor HTML utilizado</a></li>
+            </ul>
+            <ul>
+                <li><a href="#Preguntas3" class="menuItem">Preguntas Lab 4</a></li>
+                <li><a href="#ProblemasLab4" class="menuItem">Problemas Lab 4</a></li>
+                <li><a href="#Preguntas4" class="menuItem">Preguntas Lab 5</a></li>
+                <li><a href="#Preguntas5" class="menuItem">Preguntas Lab 6</a></li>
             </ul>
         </nav>
         <section>
@@ -22,7 +29,7 @@
             <table>
                 <tr>
                     <td class="texto">Nombre:</td>
-                    <td id="miNombre" class="texto">Ana Sofía Moreno</td>
+                    <td class="texto">Ana Sofía Moreno</td>
                 </tr>
                 <tr>
                     <td class="texto">Matrícula:</td>
@@ -91,12 +98,59 @@
             <p class="texto">W3C. (2025). CSS: em, px, pt, cm, in…. W3.org. https://www.w3.org/Style/Examples/007/units.en.html</p>
         </section>
         <hr>
+        <section>
+            <div id="problemasJS">
+                <h2 id="ProblemasLab4" class="subtitulo">Problemas del Laboratorio 4</h2>
+                <script src="scriptJavaLab4.js"></script>
+                <p class="marcado"><br>Descripción de problema 6 (problema a elegir): </p>
+                <p class="texto">Se necesita simular y calcular el saldo de una cuenta bancaria de ahorro con interés mensual. Se debe de poder establecer el saldo inicial, el monto de interés mensual y los meses transcurridos para así poder calcular el saldo en la cuenta.</p>
+                <p id="problema6" class="link">Haz click aquí para ejecutar el problema 6. (Se mostrará el resultado abajo).</p>
+                <div id="sol6"></div>
+                
+            </div>
+            <div id="preguntasJS">
+                <h2 id="Preguntas3" class="subtitulo">Preguntas del Laboratorio 4</h2>
+                <p class="marcado">1. ¿Qué diferencias y semejanzas hay entre Java y JavaScript?</p>
+                <p class="texto">A pesar del nombre, Java y JavaScript son lenguajes de programación independientes y no están relacionados, pues tienen objetivos y características diferentes. Algunas de las principales son:<br>- Java sirve para POO usada en back-end y aplicaciones, mientras que JavaScript se usa para generar scripts dinámicos basados en prototipos, usados en el front-end y back-end de sitios web.<br>- JavaScript no funciona de forma independiente, normalmente sirve como herramienta para generar elementos e interacción de páginas web, vinculándose a documentos HTML. Java sí se puede usar de forma independiente para crear aplicaciones.<br>- Las aplicaciones de Java se pueden ejecutar directamente y el código necesita compilarse, pero los códigos dinámicos de JavaScript se interpretan y ejecutan en un explorador web.<br>- Java es un lenguaje estático (y compilado), pero JavaScript es un lenuaje dinámico (e interpretado).</p>
+                <p class="marcado">2. ¿Qué métodos tiene el objeto Date? (Menciona al menos 5*)</p>
+                <p class="texto">El objeto Date en JS sirve para crear objetos de tiempo, que pueden contener fecha (día, mes, año), hora estática (horas, minutos, segundos) y/ o huso horario, usualmente del momento de su creación. Algunos de sus métodos incluyen: <br>- new Date() para crear un objeto Date nuevo. <br>- Muchos getters distintos como getFullYear() (regresa el año del objeto).<br>- setters como setMonth() (establece/cambia el mes del objeto).<br>- now(): regresa los milisegundos en tiempo POSIX/Unix (desde 1 de enero de 1970, 12 a.m.)<br>- parse(): para parsear una fecha string y regresar los milisegundos en tiempo Unix.</p>
+                <p class="marcado">3. ¿Qué métodos tienen los arreglos? (Menciona al menos 5*)</p>
+                <p class="texto">Algunos métodos de los arreglos en JS son:<br>- .length: regresa el tamaño del arreglo.<br>- métodos para eliminar y añadir los elementos del arreglo (pop, push, shift (eliminar 1ero), splice (añadir en posiciones específicas))<br>- join(): une todos los elementos del arreglo en un string con separadores especificados<br>- concat(): crea un nuevo arreglo a partir de la concatenación de varios arreglos.<br>- slice(): quita una parte especificada del arreglo y lo convierte en un nuevo arreglo.<br>-toSpliced(): crea un nuevo arreglo de un pedazo especificado de un arreglo original, pero sin modificar ese original (eliminar la parte).</p>
+                <p class="marcado">4. ¿Cómo se declara una variable con alcance local dentro de una función?</p>
+                <p class="texto">Dentro de una función o ámbito, si se usa "let" como type antes de la variable, esta es declarada como variable con alcance local (dentro de esa función o ámbito).</p>
+                <p class="marcado">5. ¿Qué implicaciones tiene utilizar variables globales dentro de funciones?</p>
+                <p class="texto">Utilizar variables globales dentro de una función puede generar complicaciones dentro del código, genera mayor riesgo de sobreescribir la variable, hace más difícil el encapsulamiento y división modular del código, lo cual dificulta el rastreo de errores, reduce escalabilidad y seguridad y aumenta el gasto de memoria.</p>
+                <p class="marcado">Referencias</p>
+                <p class="texto">Java. (2025). Diferencias entre JavaScript y Java. Java.com. https://www.java.com/es/download/help/java_javascript.html<br>W3Schools. (2026). JavaScript Arrays. W3schools.com. https://www.w3schools.com/js/js_date_reference.asp<br>W3Schools. (2026). JavaScript Dates. W3schools.com. https://www.w3schools.com/js/js_date_reference.asp</p>
+            </div>
+        </section>
+        <hr>
+        <section>
+            <h2 id="Preguntas4" class="subtitulo">Preguntas del Laboratorio 5</h2>
+            <p class="marcado">Describe Material design:</p>
+            <p class="texto">Material design sirve como una guía de diseño de interfaces, la cual proporciona elementos, estilos, figuras, estructuras y acomodos, etc., pero también reglas, sugerencias y principios basados en UX y diseño gráfico para poder crear diseños de interfaces. Se puede implementar usando frameworks que incluyen sus componentes en el código (del diseño) de una interfaz. Fue creado por Google en 2014.</p>
+            <p class="marcado">Referencias</p>
+            <p class="texto">Material Design. (2026). Material Design 3. https://m3.material.io/<br>Nerdcave. (2026). Tailwind CSS Cheat Sheet. Nerdcave.com. https://nerdcave.com/tailwind-cheat-sheet</p>
+        </section>
+        <hr>
+        <section>
+            <h2 id="Preguntas5" class="subtitulo">Preguntas del Laboratorio 6</h2>
+            <p class="texto">(Ejercicio de página interactiva del lab 6 elegido en otro documento HTML: "validacionPswds.html").<br><br></p>
+            <p class="marcado">1. ¿Por qué es una buena práctica usar JavaScript para checar que sean válidos los inputs de las formas antes de enviar los datos al servidor?</p>
+            <p class="texto">Es buena práctica porque validar los datos del lado del usuario (antes de enviarse al servidor) da un primer seguro acerca de la integridad y/o calidad de los datos que permite que así al llegar estos al servidor no sucedan errores comunes debido a inputs inválidos y que así pueda haber una respuesta más inmediata por parte del servidor. Además, también puede proveer un primer filtro de seguridad para amenazas.</p>
+            <p class="marcado">2. ¿Cómo puedes saltarte la seguridad de validaciones hechas con JavaScript?</p>
+            <p class="texto">Si el usuario desactiva o manipula Javascript (usando herramientas de desarrollo o inspect) en su navegador eso puede eliminar las validaciones de datos hechas con Javascript. El usuario también podría enviar la petición al servidor con otros programas externos (apps como Postman) o interceptar los datos después de haber sido enviados para modificarlos de forma posterior (herramientas como Fiddler), evitando la validación Javascript.</p>
+            <p class="marcado">3. Si te puedes saltar la seguridad de las validaciones de JavaScript, entonces ¿por qué la primera pregunta dice que es una buena práctica?</p>
+            <p class="texto">Porque aunque no es suficiente por sí sola para garantizar la seguridad, sí puede proveer un primer filtro de integridad o errores y de seguridad básica, además de que al prevenir estos y errores y permitir respuestas más rápidas del servidor, mejora la experiencia de usuario o usabilidad de los sitios con formas al permitir que el usuario reciba retroalimentación inmediata de sus inputs.</p>
+            <p class="marcado">Referencias</p>
+            <p class="texto">Information Security Stack Exchange. (2021). How do hackers trick frontend validation? Information Security Stack Exchange. https://security.stackexchange.com/questions/244030/how-do-hackers-trick-frontend-validation#:~:text=7%20Answers,it%20in%20browser%2C%20and%20submit.<br>MDN. (2025). Client-side form validation - Learn web development | MDN. Mozilla.org. https://developer.mozilla.org/en-US/docs/Learn_web_development/Extensions/Forms/Form_validation#:~:text=This%20is%20called%20form%20validation,See%20Website%20security.</p>
+        </section>
+        <hr>
         <footer>
             <h2 id="EditorHTML" class="subtitulo">Editor HTML utilizado</h2>
             <p class="texto">Para la creación de este documento html utilicé el editor Visual Studio Code.</p>
             <p class="texto">Enlace al sitio del editor:</p>
             <a href="https://code.visualstudio.com/" target="_blank" class="link">https://code.visualstudio.com/</a>
         </footer>
-        <!--  <script src="comportamientos.js"></script> -->
     </body>
 </html>
