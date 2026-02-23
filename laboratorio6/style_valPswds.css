@@ -78,10 +78,11 @@ body{
         align-items: center;
     }
     #formContainer {
+        width: 350px;
         max-width: 40%;
         background-color:rgb(160, 113, 120);
         margin: 100px;
-        padding: 50px 100px;
+        padding: 50px 30px;
         box-shadow: 2px 2px 20px rgb(90, 83, 83);
     }
     .containerMarcado{
@@ -136,6 +137,12 @@ body{
     .inputWarning{
         background-color:rgb(255, 245, 235);
         color:red;
+        font-family:Helvetica, Arial, sans-serif;
+        font-size: 13px;
+        padding: 4px 23px;
+    }
+    .formHelp{
+        color:rgb(255, 245, 235);
         font-family:Helvetica, Arial, sans-serif;
         font-size: 13px;
         padding: 4px 23px;

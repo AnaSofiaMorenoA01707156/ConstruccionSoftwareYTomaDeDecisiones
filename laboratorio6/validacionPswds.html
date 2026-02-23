@@ -14,7 +14,8 @@
                 <form id="forma">
                     <div id="campoP" class="campo">
                         <label for="password">Password (contraseña):<br></label>
-                        <input type="text" id="password"/>
+                        <input type="text" id="password" oninput="sugiere()"/>
+                        <div id="sugerencia"></div>
                     </div>
                     <div id="campoV" class="campo">
                         <label for="verif">Verificar password:<br></label>
