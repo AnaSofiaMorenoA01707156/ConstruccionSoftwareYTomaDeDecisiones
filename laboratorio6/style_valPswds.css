@@ -78,7 +78,7 @@ body{
         align-items: center;
     }
     #formContainer {
-        max-width: 40em;
+        max-width: 40%;
         background-color:rgb(160, 113, 120);
         margin: 100px;
         padding: 50px 100px;
@@ -91,13 +91,19 @@ body{
         color:rgb(255, 245, 235);   
     }
     .campo{
-        padding-bottom: 33px;
-    }
-    .campoBoton{
-        padding-bottom: 20px;
+        padding-bottom: 30px;
         display: flex;
         justify-content: center;
         align-items: center;
+        flex-direction: column;
+        gap: 0.5px;
+    }
+    .campoBoton{
+        padding-bottom: 17px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 40px;
     }
     label{
         color:rgb(255, 245, 235);
@@ -105,11 +111,23 @@ body{
         font-size: 18px;
         padding-bottom: 20px;
     }
-    input[type="button"] {
+    #botonValidar {
+        background-color:rgba(90, 83, 83, 0.8);
+        font-family:Helvetica, Arial, sans-serif;
+        color:rgb(255, 245, 235);
+        font-size: 16px;
+        padding: 10px 10px;
+        cursor: pointer;
+    }
+    #botonValidar:hover {
+        background-color: rgba(90, 83, 83, 0.6);
+    }
+    #botonReinicio {
         color:rgb(90, 83, 83);
         font-family:Helvetica, Arial, sans-serif;
         font-size: 16px;
         padding: 10px 10px;
+        cursor: pointer;
     }
     input[type="text"] {
         height: 15px;
@@ -119,7 +137,7 @@ body{
         background-color:rgb(255, 245, 235);
         color:red;
         font-family:Helvetica, Arial, sans-serif;
-        font-size: 10px;
-        padding-bottom: 20px;
+        font-size: 13px;
+        padding: 4px 23px;
     }
 }
