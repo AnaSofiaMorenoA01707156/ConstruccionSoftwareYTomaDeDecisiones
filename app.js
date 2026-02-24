@@ -1,4 +1,4 @@
-//INTRODUCCIÓN AL USO DE NODE
+//INTRODUCCIÓN AL USO DE NODE: permite tener acceso al sistema de archivos de la computadora, y ejecutar programas como servidores web.
 //Code no es secuencial, el código se va a ejecutar de forma asíncrona: trabaja con "promesas" (no ejecuta en el momento, 
 // pero se "compromete" a ejecutarlo después). Casi todas las promesas (ejecuciones) se cumplen
 console.log("hola desde node"); //con nodejs console.log imprime en la terminal del lado del servidor
@@ -14,7 +14,7 @@ for(let item of arreglo){
     }, item); //imprime el arreglo en orden ascendente porque se imprime conforme se cumpla el item en milisegundos
 }
 
-const html= filesystem.readFileSync('index6.html');
+const html= filesystem.readFileSync('exampleIndex.html');
 
 const http= require('http');
 const server=http.createServer((request, response) => {
