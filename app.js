@@ -14,15 +14,13 @@ for(let item of arreglo){
     }, item); //imprime el arreglo en orden ascendente porque se imprime conforme se cumpla el item en milisegundos
 }
 
-const html= filesystem.readFileSync('exampleIndex.html');
-
 const http= require('http');
 const server=http.createServer((request, response) => {
-    console.log(request);
+//    console.log(request);
     console.log(request.url);
-    console.log(response);
+//    console.log(response);
     response.setHeader('Content-Type', 'text/html');
-    response.write(html);
+    response.write("respuesta");
     response.end();
 });
 
