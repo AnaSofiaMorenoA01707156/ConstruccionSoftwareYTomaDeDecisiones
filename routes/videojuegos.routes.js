@@ -21,7 +21,7 @@ const html = `
       <p class="subtitle">
         My first website with <strong>Bulma</strong>!
       </p>
-<form action="/html" method="POST">
+<form action="/videojuegos/html" method="POST">
   <div class="field">
     <label for="nombre" class="label">Nombre</label>
     <div class="control">
@@ -71,12 +71,40 @@ router.use('/ruta1', (request, response, next) => {
 router.get('/html', (request, response, next) => { //se arroja con la ruta Y con el método de get, continúa gracias a next
     response.send(html); 
 });
+
 router.post('/html', (request, response, next) => { //viene del anterior, se arroja con la misma ruta PERO con el método post (al enviar formulario)
     console.log(request.body); //gracias al bodyparser
-    response.send(request.body); 
+    videojuegos.push(request.body);
+    response.redirect('/videojuegos');
 });
 
 router.use((request, response, next) => {
     console.log('Otro middleware!');
-    response.send('¡Hola mundo!'); //Manda la respuesta
+    let html_index = `
+              <a href="/videojuegos/html"><button class="button is-primary">Nuevo videojuego</button></a>
+              <div class="columns">`;
+
+        for (let juego of videojuegos) {
+            html_index += `
+                <div class="column">
+                    ${juego.nombre}
+                    <figure class="image">
+                        <img class="is-rounded" src="${juego.imagen}" />
+                    </figure>
+                </div>`;
+        }
+        
+        html_index += `    
+              </div>
+            </div>
+          </section>
+          <section class="section">
+            <div class="container">
+              <div class="columns">
+                <div class="column">
+                </div>
+              </div>  
+          `;
+
+    response.send(html_index);//Manda la respuesta
 });

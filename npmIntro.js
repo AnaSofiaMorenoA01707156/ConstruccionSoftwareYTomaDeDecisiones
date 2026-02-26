@@ -17,6 +17,10 @@ const bodyParser = require('body-parser');
 app.use(bodyParser.urlencoded({extended: false}));
 
 const rutasVideojuegos = require('./routes/videojuegos.routes');
-app.use(rutasVideojuegos);
+app.use('/videojuegos', rutasVideojuegos); //todo lo que está declarado con el router en el otro .js se monta a la ruta base /videojuegos
+
+app.use((request, response, next) => {
+  response.status(404).send("La página que estás buscando no existe.");
+});
 
 app.listen(3000);
