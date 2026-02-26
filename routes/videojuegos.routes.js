@@ -1,5 +1,6 @@
 const express = require('express');
 const router = express.Router();
+const path = require('path');
 
 module.exports = router;
 
@@ -76,6 +77,10 @@ router.post('/html', (request, response, next) => { //viene del anterior, se arr
     console.log(request.body); //gracias al bodyparser
     videojuegos.push(request.body);
     response.redirect('/videojuegos');
+});
+
+router.get('/labs', (request, response, next) => {
+    response.sendFile(path.join(__dirname, '..', 'laboratorio6', 'validacionPswds.html'));
 });
 
 router.use((request, response, next) => {

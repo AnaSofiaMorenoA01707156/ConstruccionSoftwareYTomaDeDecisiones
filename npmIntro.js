@@ -12,6 +12,10 @@ console.log("hola");
 const express = require('express');
 const app = express();
 
+const path = require('path'); //Path:
+app.use(express.static(path.join(__dirname, 'laboratorio6'))); //revisar orden de la declaración dependiendo de cuándo se quiere que se acceda a la carpeta (vs. cuando se quiere una ruta)
+//__dirname ya es una variable de node que accede a los archivos de la computador hasta el folder especificado después.
+
 //Bodyparser: es un middleware (sirve en la app de express) que sirve para poder parsear el cuerpo (contenido) de solicitudes http.
 const bodyParser = require('body-parser');
 app.use(bodyParser.urlencoded({extended: false}));
