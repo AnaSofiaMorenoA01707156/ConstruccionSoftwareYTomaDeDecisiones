@@ -1,0 +1,1 @@
+Este es el string que debe escribirse en un nuevo archivo de texto.
